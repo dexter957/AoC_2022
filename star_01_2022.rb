@@ -23,9 +23,7 @@ contents.each do |content|
 end
 elfCals[i] = sumCals
 
-#puts elfCals
 elfClasSrt = elfCals.sort_by{|k,v| v}.to_h
-#puts elfClasSrt
 
 puts "Elf no. #{elfClasSrt.keys.last.to_s} is carrying the most calories (#{elfClasSrt.values.last.to_s})"
 
