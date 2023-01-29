@@ -36,15 +36,15 @@ puts "Elf no. #{elfClasSrt.keys.first.to_s} is carrying the most calories (#{elf
 
 puts "Top elfs in carrying calories are:"
 i = 1
-sum = 0
+sumCals = 0
 elfClasSrt.each do |key, value|
     puts "Elf no. #{key.to_s} is carrying #{value.to_s} calories"
     i += 1
-    sum += value
+    sumCals += value
     break if i > 3
 end
 
-puts "And they are carrying #{sum.to_s} calories in total"
+puts "And they are carrying #{sumCals.to_s} calories in total"
 
 
 
