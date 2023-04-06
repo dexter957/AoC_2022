@@ -71,7 +71,7 @@ contents.each do |content|
     end
 end
 
-puts "The priority is #{priority.to_s}"
+puts "For part #1, the priority is #{priority.to_s}"
 
 
 
@@ -128,8 +128,5 @@ contents.each do |content|
     end
 end
 
-puts "The priority is #{priority.to_s}"
-
-
-
+puts "For part #2, the priority is #{priority.to_s}"
 
