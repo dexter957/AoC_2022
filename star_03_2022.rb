@@ -83,7 +83,7 @@ badge = ""
 first2 = []
 second2 = []
 third2 = []
-
+#array variable are initialized here because apparently they do not keep their class between loops
 
 contents.each do |content|
     timesInaRow += 1
@@ -130,3 +130,7 @@ end
 
 puts "For part #2, the priority is #{priority.to_s}"
 
+#code here is very basic; just solves the problem
+#should we wish it were more robust, we should add checks for the number of lines in the file to be divided by 3 (since we are working
+#on groups of 3 lines each
+#we should also be checking for empty lines and no work with them should they exist (they result in nil objects that cause the progrma to crush)
