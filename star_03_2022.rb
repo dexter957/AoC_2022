@@ -75,5 +75,61 @@ puts "The priority is #{priority.to_s}"
 
 
 
+#part 2 of the problem
+
+priority = 0
+timesInaRow = 0
+badge = ""
+first2 = []
+second2 = []
+third2 = []
+
+
+contents.each do |content|
+    timesInaRow += 1
+    if timesInaRow > 3
+        timesInaRow = 1
+    end
+
+    if timesInaRow == 1
+        first2 = content.chars
+    elsif timesInaRow == 2
+        second2 = content.chars
+    else
+        third2 = content.chars
+    end
+
+    if timesInaRow == 3
+        badge = false
+        common = ""
+        i = 0
+        len = first2.size
+
+        loop do
+            if (second2.include? first2[i])
+                common = common + first2[i]
+            end
+            i += 1
+            break if i == len
+        end
+
+        if common != ""
+            len = common.size
+            i=0
+            loop do
+                if (third2.include? common[i])
+                    badge = true
+                    priority += priorities[common[i].to_sym]
+                end
+                i += 1
+                break if badge ==  true or i == len
+            end
+        end
+    end
+end
+
+puts "The priority is #{priority.to_s}"
+
+
 
 
